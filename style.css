@@ -1,0 +1,121 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: salmon;
+    font-family: 'Courier New', Courier, monospace;
+    /* bring everthing to the centre */
+    height: 100vh;
+    display: flex;
+    justify-content: center;/*align horizontal*/
+    /*vertical alignment*/
+    align-items: center;
+
+}
+
+img{
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);/*center*/
+    top: 50px;
+    z-index:2;/*clock is 1 */
+
+}
+
+.clock{
+    position: relative;/*position is relative */
+    background-color: lightgray;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;/*rounded*/
+    border: 5px solid darkgray;/*border*/
+    /* shadow effect */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+
+
+}
+
+/* class number and its kids */
+.number div{
+    position: absolute;
+    font-size: 25px;
+    font-weight:bold ;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+
+
+
+}
+
+/* positioning  numbers */
+
+.t12{
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.t3{
+
+   right:6px;
+   top: 50%;
+   transform: translateY(-50%);
+
+}
+.t6{
+
+    bottom:6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.t9{
+    left: 6px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.arrows{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items:  center;
+
+}
+.arrows::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: darkgreen;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    z-index: 4;
+
+}
+
+.arrows div{
+    background-color: white;
+    width: 7px;
+    position: absolute;
+    height: 120px;
+    transform-origin: bottom center;
+    bottom:  50%;
+    z-index: 3;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+
+
+}
+
+
+
+
+.arrows .hour{
+    height: 80px;
+    transform: rotate(30deg);
+}
+
+.arrows .seconds{
+    transform: rotate(250deg);
+    background-color: gold;
+}
